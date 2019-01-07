@@ -1,5 +1,4 @@
 *.sublime-*
 pdf/*
 _build
-_static
-_templates
+python*
