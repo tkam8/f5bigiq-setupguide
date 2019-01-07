@@ -9,7 +9,7 @@ IAM user accounts (optional but not required)
 Key pair (required)
 	Per AWS best practice, this is required to get ssh access to the instance after boot. After login, you can change the admin password for access to the GUI
 
-*VPC*
+**VPC**
 
 Single or Multi Region is supported
 
