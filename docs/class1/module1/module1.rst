@@ -3,7 +3,7 @@ Module 1: Instance Provisioning
 
 **Goal:**
 
-In this module, you will learn how to provision BIG-IQ in VMware.
+In this module, you will learn how to provision BIG-IQ in VMware and AWS.
 
 
 **Tasks:**

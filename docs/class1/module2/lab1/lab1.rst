@@ -1,6 +1,6 @@
-Step 1: Recommended Resources
+Step 1: Setup Wizard
 ----------------------------------------------
 
 
-You need these resources.
-You need 2 NICs minimum.
+# Step 1
+# Step 2
