@@ -183,7 +183,13 @@ if on_rtd:
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# - attempt to solve RTD from throwing a WARNING: html_static_theme
+#   entry ... does not exist
+# - see issue #1776 on rtfd/readthedocs.org
+#   (https://github.com/rtfd/readthedocs.org/issues/1776)
+#
+# html_static_path = ['_static']
+html_static_path = []
 
 
 # -- Options for HTMLHelp output ------------------------------------------
