@@ -161,8 +161,7 @@ todo_include_todos = True
 # a list of builtin themes.
 
 html_theme = 'f5_sphinx_theme'
-html_theme_path = ["."]
-#html_theme_path = f5_sphinx_theme.get_html_theme_path()
+html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
 html_theme_options = {
                         'site_name': 'Community Training Classes & Labs',
@@ -174,7 +173,13 @@ def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
 if on_rtd:
+    html_static_path = []
     templates_path = ['_templates']
+else:
+    html_static_path = ['_static']
+
+#if on_rtd:
+#   templates_path = ['_templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -186,8 +191,8 @@ if on_rtd:
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 #
-html_static_path = ['_static']
-#html_static_path = []
+#html_static_path = ['_static']
+
 
 
 # -- Options for HTMLHelp output ------------------------------------------
