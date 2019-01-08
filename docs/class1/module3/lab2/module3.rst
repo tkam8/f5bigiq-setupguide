@@ -1,4 +1,4 @@
-Module 3: High Availability (AWS)
+High Availability (AWS)
 ==============================================================
 
 Description

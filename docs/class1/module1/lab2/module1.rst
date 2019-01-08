@@ -1,4 +1,4 @@
-Module 1: Provision BIG-IQ (AWS)
+Provision BIG-IQ (AWS)
 ==============================================================
 
 Description

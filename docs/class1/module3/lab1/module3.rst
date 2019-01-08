@@ -1,4 +1,4 @@
-Module 3: High Availability (VMware)
+High Availability (VMware)
 ==============================================================
 
 Description

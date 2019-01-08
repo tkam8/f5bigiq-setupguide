@@ -1,4 +1,4 @@
-Module 2: BIG-IQ Setup Wizard (AWS)
+BIG-IQ Setup Wizard (AWS)
 ==============================================================
 
 Description / Pre-requisites (Like license)

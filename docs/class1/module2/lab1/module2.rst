@@ -1,4 +1,4 @@
-Module 2: BIG-IQ Setup Wizard (VMware)
+BIG-IQ Setup Wizard (VMware)
 ==============================================================
 
 Description

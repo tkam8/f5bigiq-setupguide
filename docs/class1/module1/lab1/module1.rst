@@ -1,4 +1,4 @@
-Module 1: Provision BIG-IQ (VMware)
+Provision BIG-IQ (VMware)
 ==============================================================
 
 Description
