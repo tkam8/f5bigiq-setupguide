@@ -161,7 +161,8 @@ todo_include_todos = True
 # a list of builtin themes.
 
 html_theme = 'f5_sphinx_theme'
-html_theme_path = f5_sphinx_theme.get_html_theme_path()
+html_theme_path = ["."]
+#html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
 html_theme_options = {
                         'site_name': 'Community Training Classes & Labs',
