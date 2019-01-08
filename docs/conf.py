@@ -172,8 +172,8 @@ html_theme_options = {
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
-if on_rtd:
-   templates_path = ['_templates']
+# Add any paths that contain templates here, relative to this directory.
+templates_path = ['_templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
