@@ -168,11 +168,12 @@ html_theme_options = {
                         'next_prev_link': True
                      }
 
+
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
 if on_rtd:
-    templates_path = ['_templates']
+    templates_path = ['./_templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -183,13 +184,9 @@ if on_rtd:
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# - attempt to solve RTD from throwing a WARNING: html_static_theme
-#   entry ... does not exist
-# - see issue #1776 on rtfd/readthedocs.org
-#   (https://github.com/rtfd/readthedocs.org/issues/1776)
 #
-# html_static_path = ['_static']
-html_static_path = []
+html_static_path = ['./_static']
+#html_static_path = []
 
 
 # -- Options for HTMLHelp output ------------------------------------------
