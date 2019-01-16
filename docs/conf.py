@@ -123,7 +123,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = F5 BIG-IQ Quick Setup
+project = u'F5 BIG-IQ Quick Setup'
 copyright = u'F5 Networks, Inc.'
 author = u'F5 Networks, Inc.'
 
