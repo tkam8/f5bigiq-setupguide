@@ -17,8 +17,8 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 - Access to the AWS Marketplace
 - Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
-  ..NOTE:: 
-    Single or Multi Region is supported
+..NOTE:: 
+  Single or Multi Region is supported
 
 #. IAM user accounts (optional, not required)
 #. Key pair (required): `AWS Reference <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`__

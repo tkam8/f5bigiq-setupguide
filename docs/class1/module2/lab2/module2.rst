@@ -5,7 +5,7 @@ BIG-IQ Setup Wizard (AWS)
 
 In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
 
-`AskF5 Reference https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/03.html#guid-37a1f866-5f56-45bb-914f-f24dbd3348d0>`__
+`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/03.html#guid-37a1f866-5f56-45bb-914f-f24dbd3348d0>`__
 
 
 Step 1: Setup Wizard 

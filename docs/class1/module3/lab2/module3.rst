@@ -5,7 +5,7 @@ High Availability (AWS)
 
 In this lab, we will High Availability for BIG-IQ CM. Refer to below AskF5 link if you need further details. 
 
-`AskF5 Reference https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/04.html#ch-managing-a-big-iq-system>`__
+`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/04.html#ch-managing-a-big-iq-system>`__
 
 Step 1: High Availability
 ----------------------------------------------
@@ -13,7 +13,7 @@ Step 1: High Availability
 .. NOTE::
    Currently High Availability only provides configuration sync, not automatic failover. 
 
-#. Prior to HA configuration, log into both Primary and Secondary BIG-IQ CM CLI and run below commands:
+#. Root login for F5 products in AWS is disabled by default. Prior to HA configuration, log into both Primary and Secondary BIG-IQ CM CLI and run below commands:
 
   - ``tmsh modify sys db systemauth.disablerootlogin value false``
   - ``tmsh save sys config``
