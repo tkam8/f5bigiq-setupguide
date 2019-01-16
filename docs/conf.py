@@ -73,6 +73,29 @@ on_snops = os.environ.get('SNOPS_ISALIVE', None) == 'True'
 print "on_rtd = %s" % on_rtd
 print "on_snops = %s" % on_snops
 
+github_url = "https://github.com/tkam8/f5bigiq-setupguide"
+
+branch_map = {
+    "stable":"master",
+    "latest":"master"
+}
+
+try:
+    if not on_rtd:
+        from git import Repo
+        repo = Repo("%s/../" % os.getcwd())
+        git_branch = repo.active_branch
+        git_branch_name = git_branch.name
+    else:
+        git_branch_name = os.environ.get('READTHEDOCS_VERSION', None)
+except:
+    git_branch_name = 'master'
+
+print "guessed git branch: %s" % git_branch_name
+
+if git_branch_name in branch_map:
+    git_branch_name = branch_map[git_branch_name]
+print " remapped to git branch: %s" % git_branch_name
 
 # -- General configuration ------------------------------------------------
 
@@ -87,6 +110,11 @@ extensions = [
   'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo'
 ]
+
+html_context = {
+  "github_url":github_url,
+  "github_branch":git_branch_name
+}
 
 if 'googleanalytics_id' in locals() and len(googleanalytics_id) > 0:
   extensions += ['sphinxcontrib.googleanalytics']
@@ -172,6 +200,10 @@ html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
 if on_rtd:
     templates_path = ['_templates']
 
+extlinks = {
+    'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
+}
+
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
@@ -189,7 +221,16 @@ def setup(app):
 #
 html_static_path = ['_static']
 
+# If true, links to the reST sources are added to the pages.
+#
+html_show_sourcelink = True
 
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#
+html_show_copyright = True
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'F5BIGIQSetupGuide'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
