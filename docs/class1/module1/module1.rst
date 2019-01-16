@@ -1,21 +1,14 @@
-Module 1: Instance Provisioning
+Module 1: BIG-IQ Instance Provisioning
 ===========================
 
 **Goal:**
 
-In this module, you will learn how to provision BIG-IQ in VMware and AWS.
+In this module, you will learn how to provision BIG-IQ Centralized Manager (CM) and Data Collection Device (DCD) in supported platforms.
 
-
-**Tasks:**
-
-1. task1
-
-2. task2
-
-3. task3
 
 .. NOTE::
-    add notes **‘as necessary’** 
+   For the latest info on supported platforms refer to `AskF5 <https://support.f5.com/csp/knowledge-center/software/BIG-IQ?module=BIG-IQ%20Centralized%20Management&version=6.1.0>`__.
+
 
 .. toctree::
    :maxdepth: 1
