@@ -17,13 +17,15 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 - Access to the AWS Marketplace
 - Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
-..NOTE:: 
-  Single or Multi Region is supported
+  ..NOTE:: 
+    Single or Multi Region is supported
 
-#. IAM user accounts (optional but not required)
+#. IAM user accounts (optional, not required)
 #. Key pair (required): `AWS Reference <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`__
+   
    .. IMPORTANT::
       Per AWS best practice, this is required to get ssh access to the instance after boot. After login, you can change the admin password for access to the GUI
+
 #. Management subnet (public)
 	For BIG-IQ GUI access, data sync between Primary/Secondary
 #. External subnet (public)
@@ -63,23 +65,36 @@ Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same st
     
    .. ATTENTION::Make sure to accept EULA when launching for first time
 #. Click Continue
+
    |lab-1-2|
+
 #. Select m4.xlarge, click Next: Configure Instance Details
+
    |lab-1-3|
+
 #. Enter in "2" for number of instances to provision Primary and Secondary BIG-IQ CM devices. Select your VPC and then management subnet. 
+
    |lab-1-4|
+
 #. Launch with 2 network interfaces. Select the External subnet for the additional NIC. Click Review and Launch
+
    |lab-1-5|
+
    |lab-1-6|
+
 #. Select SSD, click Next
+
    |lab-1-7|
+
 #. Click Launch
+
    |lab-1-8|
+
 #. Associate EIP to primary IP of the management ENI
 #. Log in via SSH to the EIP. Use public key authentication and your key that you specified when launching the instances
 #. Change admin password so you can log into GUI
-   - ``tmsh modify auth password admin``
-   - ``tmsh save sys config``
+  - ``tmsh modify auth password admin``
+  - ``tmsh save sys config``
 
 
 .. |lab-1-1| image:: images/lab-1-1.png
