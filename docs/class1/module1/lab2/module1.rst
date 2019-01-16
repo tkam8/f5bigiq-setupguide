@@ -3,7 +3,7 @@ Provision BIG-IQ (AWS)
 
 **Description:**
 
-This lab will deploy both BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
+In this lab, we will deploy both BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
 
 `AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-and-amazon-web-services-setup-6-0-0/2.html#guid-0fd6defe-1e5b-4414-bd5b-674a1630b828>`__
 
@@ -15,6 +15,7 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 
 - An active AWS account
 - Access to the AWS Marketplace
+- Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
 ..NOTE:: 
   Single or Multi Region is supported
@@ -48,6 +49,11 @@ Required Network Interfaces:  2
 
 **AWS Marketplace**
 
+Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same steps to deploy your BIG-IQ DCD device(s). 
+
+.. IMPORTANT::
+   DCD is required to use analytics, application dashboard, and other visualization features. 
+
 #. Search using keywords "F5 BIG-IQ" 
     Note that "F5 BIG-IQ Virtual Edition" and "F5 BIG-IP Cloud Edition" deploy the same instance of BIG-IQ Centralized Manager. 
     
@@ -60,7 +66,7 @@ Required Network Interfaces:  2
    |lab-1-2|
 #. Select m4.xlarge, click Next: Configure Instance Details
    |lab-1-3|
-#. Enter in "2" for number of instances to provision Primary and Secondary devices. Select your VPC and then management subnet
+#. Enter in "2" for number of instances to provision Primary and Secondary BIG-IQ CM devices. Select your VPC and then management subnet. 
    |lab-1-4|
 #. Launch with 2 network interfaces. Select the External subnet for the additional NIC. Click Review and Launch
    |lab-1-5|
@@ -72,8 +78,8 @@ Required Network Interfaces:  2
 #. Associate EIP to primary IP of the management ENI
 #. Log in via SSH to the EIP. Use public key authentication and your key that you specified when launching the instances
 #. Change admin password so you can log into GUI
-   ``tmsh modify auth password admin``
-   ``tmsh save sys config``
+   - ``tmsh modify auth password admin``
+   - ``tmsh save sys config``
 
 
 .. |lab-1-1| image:: images/lab-1-1.png
