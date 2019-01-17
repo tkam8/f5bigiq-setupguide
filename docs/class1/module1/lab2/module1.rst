@@ -17,8 +17,8 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 - Access to the AWS Marketplace
 - Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
-..NOTE:: 
-  Single or Multi Region is supported
+  ..NOTE:: 
+    Single or Multi Region is supported
 
 #. IAM user accounts (optional, not required)
 #. Key pair (required): `AWS Reference <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`__
@@ -31,9 +31,9 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 #. External subnet (public)
    - For Elasticsearch Cluster traffic between BIG-IQ CM and BIG-IQ DCD (logging node)
    - For BIG-IP device discovery, management, monitoring
-#. Security group configuration
-   - Group1= allow-only-ssh-https-ping
-   - Group2= allow-all-traffic
+#. Security group configuration. Configure your security group so that it meets below criteria:
+   - Criteria 1 = **allow-only-ssh-https** from the source IP of your location for management access
+   - Criteria 2 = **allow-all-traffic** from the internal AWS subnet 10.0.0.0/16 for traffic between BIG-IQ devices
 #. Internet gateway (for initial BIG-IQ activation)
    - If you cannot allow internet access, you will need to do manual activation for BIG-IQ and BIG-IP pool licenses
 #. Route Table configuration (association)
@@ -51,13 +51,13 @@ Required Network Interfaces:  2
 
 **AWS Marketplace**
 
-Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same steps to deploy your BIG-IQ DCD device(s). 
+Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same steps to deploy your BIG-IQ DCD device(s). 
 
 .. IMPORTANT::
    DCD is required to use analytics, application dashboard, and other visualization features. 
 
-#. Search using keywords "F5 BIG-IQ" 
-    Note that "F5 BIG-IQ Virtual Edition" and "F5 BIG-IP Cloud Edition" deploy the same instance of BIG-IQ Centralized Manager. 
+#. Search using keywords **F5 BIG-IQ** 
+    Note that **F5 BIG-IQ Virtual Edition** and **F5 BIG-IP Cloud Edition** deploy the same instance of BIG-IQ Centralized Manager. 
     
    |lab-1-1|
 
@@ -72,7 +72,7 @@ Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same st
 
    |lab-1-3|
 
-#. Enter in "2" for number of instances to provision Primary and Secondary BIG-IQ CM devices. Select your VPC and then management subnet. 
+#. Enter in **2** for number of instances to provision Primary and Secondary BIG-IQ CM devices. Select your VPC and then management subnet. 
 
    |lab-1-4|
 
@@ -80,15 +80,25 @@ Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same st
 
    |lab-1-5|
 
+#. For storage size, you can set 95GB for CM, and 500GB for DCD. Select General Purpose SSD and click Next: Add Tags
+
    |lab-1-6|
 
-#. Select SSD, click Next
+#. Add tags as necessary
 
    |lab-1-7|
 
-#. Click Launch
+#. Select the existing security group you created earlier, then click Review and Launch
 
    |lab-1-8|
+
+#. Click Launch
+
+   |lab-1-9|
+
+#. Select the existing key pair you created earlier, then click Launch Instances
+
+   |lab-1-10|
 
 #. Associate EIP to primary IP of the management ENI
 #. Log in via SSH to the EIP. Use public key authentication and your key that you specified when launching the instances
@@ -105,3 +115,6 @@ Follow below steps to deploy "2" BIG-IQ CM devices. You can repeat these same st
 .. |lab-1-6| image:: images/lab-1-6.png
 .. |lab-1-7| image:: images/lab-1-7.png
 .. |lab-1-8| image:: images/lab-1-8.png
+.. |lab-1-9| image:: images/lab-1-9.png
+.. |lab-1-10| image:: images/lab-1-10.png
+
