@@ -80,7 +80,7 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 
    |lab-1-5|
 
-#. For storage size, you can set 95GB for CM, and 500GB for DCD. Select General Purpose SSD and click Next: Add Tags
+#. For storage size, you can set it to 500GB. Select General Purpose SSD and click Next: Add Tags
 
    |lab-1-6|
 
