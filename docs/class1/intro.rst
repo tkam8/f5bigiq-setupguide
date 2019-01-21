@@ -6,7 +6,7 @@ This document details the technical steps needed to set up BIG-IQ v6.1 for testi
 Infrastructure
 ---------------
 
-F5\ :sup:`®` BIG-IQ:sup:`®` Centralized Management is a platform that
+F5\ :sup:`®` BIG-IQ\ :sup:`®` Centralized Management is a platform that
 you use as a tool to help you manage BIG-IP\ :sup:`®` devices and all of
 their services (such as LTM\ :sup:`®`, AFM\ :sup:`®`, ASM\ :sup:`®`, and
 so forth), from one location. BIG-IQ can manage up to 600 (physical,
@@ -25,7 +25,7 @@ administrators to minimize downtime and potential security issues. You
 can also allow users to view or edit only those BIG-IP objects that they
 need to do their job.
 
-An F5\ :sup:`®` BIG-IQ:sup:`®` Centralized Management solution can
+An F5\ :sup:`®` BIG-IQ\ :sup:`®` Centralized Management solution can
 involve a number of different elements. The topology for these elements
 depends on your needs, and on whether you include data collection
 devices (DCDs) in your solution. A typical solution can include the
@@ -56,7 +56,7 @@ security issues.
 
 A BIG-IP device runs a number of licensed components that are designed
 around application availability, access control, and security solutions.
-These components run on top of F5\ :sup:`®` TMOS:sup:`®`. This custom
+These components run on top of F5\ :sup:`®` TMOS\ :sup:`®`. This custom
 operating system is an event-driven operating system designed
 specifically to inspect network and application traffic, and make
 real-time decisions based on the configurations you provide. The BIG-IP

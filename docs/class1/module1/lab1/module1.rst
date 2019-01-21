@@ -1,30 +1,21 @@
-Module 1: Provision BIG-IQ (VMware)
+Provision BIG-IQ (VMware) - TBD
 ==============================================================
 
-Description
+**Description:**
 
-Stage 1:
+This lab will deploy both BIG-IQ CM and DCD in VMware ESXi. Refer to below AskF5 link if you need further details. 
 
--  workflow1
-
--  workflow2
-
--  Bworkflow3
-
-Stage 2:
-
--  if necessary
-
-.. NOTE::
-     if needed
-
-1.	The BIG-IP device must be located in your network.
-2.	The BIG-IP device must be running a compatible software version.
-3.	Port 22 and 443 must be open to the BIG-IQ management address, or any alternative IP address used to add the BIG-IP device to the BIG-IQ inventory.
+`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-and-vmware-setup-6-0-0.html>`__
 
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+Step 1: VMware ESXi Requirements
+----------------------------------------------
 
-   lab*
+The vSphere virtual machine guest environment for the BIG-IQ Virtual Edition (VE), at minimum, must include:
+
+- 4 virtual CPUs
+- 16 GB RAM
+- Important: When you provision the amount of RAM allocated to the virtual machine, it must match the amount of reserve RAM.
+- 1 VMXNET3 virtual network adapter
+- 1 virtual network adapter
+- At least 128GB disk

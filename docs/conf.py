@@ -73,6 +73,29 @@ on_snops = os.environ.get('SNOPS_ISALIVE', None) == 'True'
 print "on_rtd = %s" % on_rtd
 print "on_snops = %s" % on_snops
 
+github_url = "https://github.com/tkam8/f5bigiq-setupguide"
+
+branch_map = {
+    "stable":"master",
+    "latest":"master"
+}
+
+try:
+    if not on_rtd:
+        from git import Repo
+        repo = Repo("%s/../" % os.getcwd())
+        git_branch = repo.active_branch
+        git_branch_name = git_branch.name
+    else:
+        git_branch_name = os.environ.get('READTHEDOCS_VERSION', None)
+except:
+    git_branch_name = 'master'
+
+print "guessed git branch: %s" % git_branch_name
+
+if git_branch_name in branch_map:
+    git_branch_name = branch_map[git_branch_name]
+print " remapped to git branch: %s" % git_branch_name
 
 # -- General configuration ------------------------------------------------
 
@@ -87,6 +110,11 @@ extensions = [
   'sphinxjp.themes.basicstrap',
   'sphinx.ext.todo'
 ]
+
+html_context = {
+  "github_url":github_url,
+  "github_branch":git_branch_name
+}
 
 if 'googleanalytics_id' in locals() and len(googleanalytics_id) > 0:
   extensions += ['sphinxcontrib.googleanalytics']
@@ -123,8 +151,8 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = classname
-copyright = u'2017, F5 Networks, Inc.'
+project = u'F5 BIG-IQ Quick Setup'
+copyright = u'F5 Networks, Inc.'
 author = u'F5 Networks, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -159,7 +187,7 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-
+import f5_sphinx_theme
 html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
@@ -167,12 +195,19 @@ html_theme_options = {
                         'site_name': 'Community Training Classes & Labs',
                         'next_prev_link': True
                      }
+html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
+
+if on_rtd:
+    templates_path = ['_templates']
+
+extlinks = {
+    'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
+}
 
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
 
-if on_rtd:
-    templates_path = ['_templates']
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -183,8 +218,19 @@ if on_rtd:
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
+#
 html_static_path = ['_static']
 
+# If true, links to the reST sources are added to the pages.
+#
+html_show_sourcelink = True
+
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#
+html_show_copyright = True
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'F5BIGIQSetupGuide'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
@@ -256,3 +302,88 @@ texinfo_documents = [
      author, classname, classname,
      'Training'),
 ]
+
+# -- Options for Epub output ----------------------------------------------
+
+# Bibliographic Dublin Core info.
+epub_title = project
+epub_author = author
+epub_publisher = author
+epub_copyright = copyright
+
+# The basename for the epub file. It defaults to the project name.
+# epub_basename = project
+
+# The HTML theme for the epub output. Since the default themes are not
+# optimized for small screen space, using the same theme for HTML and epub
+# output is usually not wise. This defaults to 'epub', a theme designed to save
+# visual space.
+#
+# epub_theme = 'epub'
+
+# The language of the text. It defaults to the language option
+# or 'en' if the language is not set.
+#
+# epub_language = ''
+
+# The scheme of the identifier. Typical schemes are ISBN or URL.
+# epub_scheme = ''
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+
+# A unique identification for the text.
+#
+# epub_uid = ''
+
+# A tuple containing the cover image and cover page html template filenames.
+#
+# epub_cover = ()
+
+# A sequence of (type, uri, title) tuples for the guide element of content.opf.
+#
+# epub_guide = ()
+
+# HTML files that should be inserted before the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# epub_pre_files = []
+
+# HTML files that should be inserted after the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# epub_post_files = []
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+# The depth of the table of contents in toc.ncx.
+#
+# epub_tocdepth = 3
+
+# Allow duplicate toc entries.
+#
+# epub_tocdup = True
+
+# Choose between 'default' and 'includehidden'.
+#
+# epub_tocscope = 'default'
+
+# Fix unsupported image types using the Pillow.
+#
+# epub_fix_images = False
+
+# Scale large images.
+#
+# epub_max_image_width = 0
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#
+# epub_show_urls = 'inline'
+
+# If false, no index is generated.
+#
+# epub_use_index = True
+

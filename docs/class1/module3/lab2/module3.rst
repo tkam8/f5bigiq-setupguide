@@ -1,30 +1,33 @@
-Module 3: High Availability (AWS)
+High Availability (AWS)
 ==============================================================
 
-Description
+**Description:**
 
-Stage 1:
+In this lab, we will High Availability for BIG-IQ CM. Refer to below AskF5 link if you need further details. 
 
--  workflow1
+`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/04.html#ch-managing-a-big-iq-system>`__
 
--  workflow2
-
--  Bworkflow3
-
-Stage 2:
-
--  if necessary
+Step 1: High Availability
+----------------------------------------------
 
 .. NOTE::
-     if needed
+   Currently High Availability only provides configuration sync, not automatic failover. 
 
-1.	The BIG-IP device must be located in your network.
-2.	The BIG-IP device must be running a compatible software version.
-3.	Port 22 and 443 must be open to the BIG-IQ management address, or any alternative IP address used to add the BIG-IP device to the BIG-IQ inventory.
+#. Root login for F5 products in AWS is disabled by default. Prior to HA configuration, log into both Primary and Secondary BIG-IQ CM CLI and run below commands:
 
+  - ``tmsh modify sys db systemauth.disablerootlogin value false``
+  - ``tmsh save sys config``
+  
+#. Click System > BIG-IQ HA > Add Secondary and enter in the Secondary connectivity information
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+   |lab-1-1|
 
-   lab*
+   - Use self-ip of peer BIG-IQ
+   - Enter in root password that you configured in the setup wizard (required)
+
+#. Click "OK" to add the HA Peer Device 
+
+   |lab-1-2|
+
+.. |lab-1-1| image:: images/lab-1-1.png
+.. |lab-1-2| image:: images/lab-1-2.png
