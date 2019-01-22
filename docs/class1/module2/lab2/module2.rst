@@ -11,7 +11,7 @@ In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS clou
 Step 1: Setup Wizard 
 ----------------------------------------------
 
-Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference will be step (2) below.
+Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference will be step (2) below.
 
 
 #. When you first log into the BIG-IQ, you must complete the setup wizard. The first step is licensing. Enter in the Base Registration Key for your BIG-IQ CM, accept EULA and activate. 
