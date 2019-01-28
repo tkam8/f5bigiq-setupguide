@@ -17,8 +17,8 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 - Access to the AWS Marketplace
 - Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
-..NOTE:: 
-  Single or Multi Region is supported
+  ..NOTE:: 
+    Single or Multi Region is supported
 
 #. IAM user accounts (optional)
 #. Key pair (required): `AWS Reference <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`__
@@ -40,11 +40,11 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 
 #. Internet gateway (for initial BIG-IQ activation)
 
-   - If you cannot allow internet access, you will need to do manual activation for BIG-IQ and BIG-IP pool licenses
+  - If you cannot allow internet access, you will need to do manual activation for BIG-IQ and BIG-IP pool licenses
 
 #. Route Table configuration (association)
 
-   - To allow access to internet for management and external subnets
+  - To allow access to internet for management and external subnets
 
 
 Step 2: Launch Instance
