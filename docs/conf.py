@@ -200,9 +200,9 @@ html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
 if on_rtd:
     templates_path = ['_templates']
 
-extlinks = {
-    'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
-}
+#extlinks = {
+#    'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
+#}
 
 def setup(app):
     app.add_stylesheet('css/f5_agility_theme.css')
