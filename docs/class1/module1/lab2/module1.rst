@@ -17,10 +17,10 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 - Access to the AWS Marketplace
 - Valid BIG-IQ CM and BIG-IQ DCD registration keys (Contact your F5 Sales representative for this)
 
-  ..NOTE:: 
-    Single or Multi Region is supported
+..NOTE:: 
+  Single or Multi Region is supported
 
-#. IAM user accounts (optional, not required)
+#. IAM user accounts (optional)
 #. Key pair (required): `AWS Reference <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>`__
    
    .. IMPORTANT::
@@ -29,14 +29,21 @@ Before you deploy BIG-IQ in AWS, ensure that you meet below requirements:
 #. Management subnet (public)
 	For BIG-IQ GUI access, data sync between Primary/Secondary
 #. External subnet (public)
+
    - For Elasticsearch Cluster traffic between BIG-IQ CM and BIG-IQ DCD (logging node)
    - For BIG-IP device discovery, management, monitoring
+
 #. Security group configuration. Configure your security group so that it meets below criteria:
-   - Criteria 1 = **allow-only-ssh-https** from the source IP of your location for management access
-   - Criteria 2 = **allow-all-traffic** from the internal AWS subnet 10.0.0.0/16 for traffic between BIG-IQ devices
+  
+  - Criteria 1 = **allow-only-ssh-https** from the source IP of your location for management access
+  - Criteria 2 = **allow-all-traffic** from the internal AWS subnet 10.0.0.0/16 for traffic between BIG-IQ devices
+
 #. Internet gateway (for initial BIG-IQ activation)
+
    - If you cannot allow internet access, you will need to do manual activation for BIG-IQ and BIG-IP pool licenses
+
 #. Route Table configuration (association)
+
    - To allow access to internet for management and external subnets
 
 
