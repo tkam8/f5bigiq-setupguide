@@ -15,6 +15,7 @@ The vSphere virtual machine guest environment for the BIG-IQ Virtual Edition (VE
 
 - 4 virtual CPUs
 - 16 GB RAM
+
      - Important: When you provision the amount of RAM allocated to the virtual machine, it must match the amount of reserved RAM.
 - 1 VMXNET3 virtual network adapter
 - 1 virtual network adapter
@@ -33,8 +34,8 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 
      |lab-1-1|
 
-.. NOTE:: 
-   Use the LARGE (500GB) footprint image for your BIG-IQ DCD devices. 
+     .. NOTE:: 
+        Use the LARGE (500GB) footprint image for your BIG-IQ DCD devices. 
 
      |lab-1-2|
 
@@ -60,8 +61,8 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 
 #. Select your management and Internal networks (External is optional), select **Thick** provisioning, then click **Next**
 
-.. NOTE:: 
-   In this lab we will use a separate Internal network for communication with the DCD
+     .. NOTE:: 
+        In this lab we will use a separate Internal network for communication with the DCD
 
      |lab-1-8|
 
@@ -96,3 +97,5 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 .. |lab-1-8| image:: images/lab-1-8.png
 .. |lab-1-9| image:: images/lab-1-9.png
 .. |lab-1-10| image:: images/lab-1-10.png
+.. |lab-1-11| image:: images/lab-1-11.png
+.. |lab-1-12| image:: images/lab-1-12.png
