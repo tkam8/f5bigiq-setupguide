@@ -3,7 +3,7 @@ BIG-IQ Setup Wizard (AWS)
 
 **Description:**
 
-In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
+In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link for official documentation. 
 
 `AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/03.html#guid-37a1f866-5f56-45bb-914f-f24dbd3348d0>`__
 
@@ -14,7 +14,7 @@ Step 1: Setup Wizard
 Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference will be step (2) below.
 
 
-#. When you first log into the BIG-IQ, you must complete the setup wizard. The first step is licensing. Enter in the Base Registration Key for your BIG-IQ CM, click **agree** to accept EULA and activate. Click **Next** to proceed to the next step. 
+#. When you first log into the BIG-IQ, you must complete the setup wizard. The first step is licensing. Enter in the Base Registration Key for your BIG-IQ CM, click **agree** to accept EULA and activate. Click **Next** to proceed to the next step
 
    .. NOTE::
       If you cannot configure Internet access, use Manual activation
@@ -36,6 +36,9 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
 #. Set Master key: <Strong password>
 
    |lab-1-5|
+
+   .. IMPORTANT::
+       If this BIG-IQ is part of an HA or DCD configuration, make sure you keep track of the pass phrase, because it cannot be recovered if you lose it.
 
 #. Skip changing the password for admin, just set root
 

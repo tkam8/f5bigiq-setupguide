@@ -3,7 +3,7 @@ Provision BIG-IQ (AWS)
 
 **Description:**
 
-In this lab, we will deploy both BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
+In this lab, we will deploy both BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link for official documentation. 
 
 `AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-and-amazon-web-services-setup-6-0-0/2.html#guid-0fd6defe-1e5b-4414-bd5b-674a1630b828>`__
 
