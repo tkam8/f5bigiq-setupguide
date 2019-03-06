@@ -14,14 +14,14 @@ Step 1: Setup Wizard
 Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference will be step (2) below.
 
 
-#. When you first log into the BIG-IQ, you must complete the setup wizard. The first step is licensing. Enter in the Base Registration Key for your BIG-IQ CM, accept EULA and activate. 
+#. When you first log into the BIG-IQ, you must complete the setup wizard. The first step is licensing. Enter in the Base Registration Key for your BIG-IQ CM, click **agree** to accept EULA and activate. Click **Next** to proceed to the next step. 
 
    .. NOTE::
       If you cannot configure Internet access, use Manual activation
 
    |lab-1-1|
 
-#. Select "BIG-IQ Central Management" for CM. Select "BIG-IQ Data Collection Device" when configuring your logging node
+#. Select **BIG-IQ Central Management** for CM. Select **BIG-IQ Data Collection Device** when configuring your logging node
 
    |lab-1-2|
 
@@ -33,7 +33,7 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
 
    |lab-1-4|
 
-#. Set Master key: <Long password>
+#. Set Master key: <Strong password>
 
    |lab-1-5|
 

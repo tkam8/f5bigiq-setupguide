@@ -110,6 +110,7 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 #. Associate EIP to primary IP of the management ENI
 #. Log in via SSH to the EIP. Use public key authentication and your key that you specified when launching the instances
 #. Change admin password so you can log into GUI
+
   - ``tmsh modify auth password admin``
   - ``tmsh save sys config``
 
