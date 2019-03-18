@@ -78,14 +78,11 @@ Follow below steps to deploy **2** BIG-IQ CM devices. You can repeat these same 
 
      |lab-1-11|
 
-#. Log in using the root/default credentials and type in ``config`` to configure the management ip. You can also change the admin credentials by using below commands:
-
-     - ``tmsh modify auth password admin``
-     - ``tmsh save sys config``
+#. Log in using the root/default credentials and type in ``config`` to configure the management ip. 
 
      |lab-1-12|
 
-#. Access the management IP over HTTPS and log in using the admin credentials you set or use admin/admin default credentials.
+#. Access the management IP over HTTPS and log in using the default credentials (admin/admin).
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
