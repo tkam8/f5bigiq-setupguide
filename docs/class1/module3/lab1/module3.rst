@@ -23,9 +23,11 @@ First, you must download the default SSL certificates of the primary and seconda
 
    |lab-1-2|
 
-#. Select **Create New**, enter in a unique name for each certificate, click **Choose File...** to select the certificate you downloaded earlier. Click **Save & Close** then **Close** when uploading completes
+#. Select **Create New**, enter in a unique name for each certificate, click **Choose File** to select the certificate you downloaded earlier. Click **Save & Close** then **Close** when uploading completes
 
    |lab-1-3|
+
+     Repeat this step for the secondary BIG-IQ
 
    |lab-1-4|
 
@@ -38,7 +40,7 @@ Step 2: High Availability
 
 For the high availability pair to synchronize properly, each system must be running the same BIG-IQ version, and the clocks on each system must be synchronized to within 60 seconds.
 
-#. Click **System** > **BIG-IQ HA** > Add Secondary and enter in the Secondary connectivity information
+#. Click **System** > **BIG-IQ HA** > **Add Secondary** and enter in the secondary device connectivity information
 
    |lab-1-6|
 
@@ -48,6 +50,8 @@ For the high availability pair to synchronize properly, each system must be runn
 #. Click **OK** to add the HA Peer Device 
 
    |lab-1-7|
+
+This completes the BIG-IQ High Availability configuration. 
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
