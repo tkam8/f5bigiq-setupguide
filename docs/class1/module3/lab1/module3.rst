@@ -15,15 +15,15 @@ First, you must download the default SSL certificates of the primary and seconda
 
 #. Access both BIG-IQ devices via ssh client
 
-#. Navigate to ``/config/ssl/ssl.crt`` and download the **default.crt** file 
+#. Navigate to ``/config/httpd/conf/ssl.crt/server.crt`` and download the **server.crt** file 
 
    |lab-1-1|
 
-#. On the primary BIG-IQ, click System > SSL CERTIFICATE VERIFICATION > check **Enable** and **Certificates I provide**. Then click **Import** to upload the certificates
+#. On the primary BIG-IQ, click System > SSL CERTIFICATE VERIFICATION > click **Import** to upload the certificates
 
    |lab-1-2|
 
-#. Select **Create New**, enter in a unique name for each certificate, click **Choose File...** to select the certificate you downloaded earlier. Click **Save & Close** 
+#. Select **Create New**, enter in a unique name for each certificate, click **Choose File...** to select the certificate you downloaded earlier. Click **Save & Close** then **Close** when uploading completes
 
    |lab-1-3|
 
