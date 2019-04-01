@@ -6,11 +6,11 @@ This document details the technical steps needed to set up BIG-IQ v6.1 for testi
 Infrastructure
 ---------------
 
-F5\ :sup:`®` BIG-IQ\ :sup:`®` Centralized Management is a platform that
-you use as a tool to help you manage BIG-IP\ :sup:`®` devices and all of
-their services (such as LTM\ :sup:`®`, AFM\ :sup:`®`, ASM\ :sup:`®`, and
+F5 BIG-IQ Centralized Management is a platform that
+you use as a tool to help you manage BIG-IP devices and all of
+their services (such as LTM, AFM, ASM, and
 so forth), from one location. BIG-IQ can manage up to 600 (physical,
-virtual, or vCMP\ :sup:`®`) BIG-IP devices and handle licensing for up
+virtual, or vCMP) BIG-IP devices and handle licensing for up
 to 5,000 unmanaged devices.
 
 Using BIG-IQ helps you more efficiently manage your BIG-IP devices. That
@@ -25,7 +25,7 @@ administrators to minimize downtime and potential security issues. You
 can also allow users to view or edit only those BIG-IP objects that they
 need to do their job.
 
-An F5\ :sup:`®` BIG-IQ\ :sup:`®` Centralized Management solution can
+An F5 BIG-IQ Centralized Management solution can
 involve a number of different elements. The topology for these elements
 depends on your needs, and on whether you include data collection
 devices (DCDs) in your solution. A typical solution can include the
@@ -46,7 +46,7 @@ following elements:
 **BIG-IQ Centralized Management system**
 
 Using BIG-IQ Centralized Management, you can centrally manage your
-BIG-IP\ :sup:`®` devices, performing operations such as backups,
+BIG-IP devices, performing operations such as backups,
 licensing, monitoring, and configuration management. And because access
 to each area of BIG-IQ is role-based, you can limit access to users,
 thus maximizing work flows while minimizing errors and potential
@@ -56,7 +56,7 @@ security issues.
 
 A BIG-IP device runs a number of licensed components that are designed
 around application availability, access control, and security solutions.
-These components run on top of F5\ :sup:`®` TMOS\ :sup:`®`. This custom
+These components run on top of F5 TMOS. This custom
 operating system is an event-driven operating system designed
 specifically to inspect network and application traffic, and make
 real-time decisions based on the configurations you provide. The BIG-IP
@@ -92,8 +92,8 @@ upgrade your software.
 **Network environment for simple device management and configuration**
 
 To deploy a simple device management and configuration environment, all
-you need is one or more BIG-IQ\ :sup:`®` systems and the
-BIG-IP\ :sup:`®` devices that you want to manage. The number of BIG-IQ
+you need is one or more BIG-IQ systems and the
+BIG-IP devices that you want to manage. The number of BIG-IQ
 systems you need depends on how much redundancy your business requires.
 A second system provides high availability failover capability.
 
