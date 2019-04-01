@@ -232,6 +232,14 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'F5BIGIQSetupGuide'
 
+# html_add_permalinks
+# Sphinx will add “permalinks” for each heading and description environment as paragraph 
+# signs that become visible when the mouse hovers over them.
+# This value determines the text for the permalink; it defaults to "¶". 
+# Set it to None or the empty string to disable permalinks.
+
+html_add_permalinks = '§'
+
 # -- Options for HTMLHelp output ------------------------------------------
 
 cleanname = re.sub('\W+','',classname)
