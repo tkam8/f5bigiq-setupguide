@@ -238,7 +238,7 @@ htmlhelp_basename = 'F5BIGIQSetupGuide'
 # This value determines the text for the permalink; it defaults to "¶". 
 # Set it to None or the empty string to disable permalinks.
 
-html_add_permalinks = '§'
+html_add_permalinks = [u'link']
 
 # -- Options for HTMLHelp output ------------------------------------------
 
