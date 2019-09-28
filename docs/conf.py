@@ -384,9 +384,47 @@ def setup(app):
 #
 html_static_path = ['_static']
 
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
+#
+# html_extra_path = []
+
+# If not None, a 'Last updated on:' timestamp is inserted at every page
+# bottom, using the given strftime format.
+# The empty string is equivalent to '%b %d, %Y'.
+#
+html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
+
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+#
+# html_use_smartypants = True
+
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+#
+# html_additional_pages = {}
+
+# If false, no module index is generated.
+#
+html_domain_indices = True
+
+# If false, no index is generated.
+#
+html_use_index = True
+
+# If true, the index is split into individual pages for each letter.
+#
+html_split_index = False
+
 # If true, links to the reST sources are added to the pages.
 #
 html_show_sourcelink = True
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+#
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #
