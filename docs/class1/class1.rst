@@ -1,7 +1,7 @@
-BIG-IQ 6.1 Centralized Management Quick Setup Guide 
+BIG-IQ 7.0 Centralized Management Quick Setup Guide 
 ================================================
 
-**Description**: This guide will focus on the basic setup steps for BIG-IQ CM in supported environments. 
+**Description**: This guide will focus on the basic setup steps for BIG-IQ CM. 
 
 .. NOTE::
    This is a supplement guide to official documentation on `AskF5 <https://support.f5.com>`__. 

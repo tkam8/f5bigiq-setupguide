@@ -1,7 +1,7 @@
 Overview
 ========
 
-This document details the technical steps needed to set up BIG-IQ v6.1 for testing in a test environment. This guide assumes a small environment that requires high availability. 
+This document details the technical steps needed to set up BIG-IQ v7.0 for testing in a test environment. This guide assumes a small environment that requires high availability. 
 
 Infrastructure
 ---------------

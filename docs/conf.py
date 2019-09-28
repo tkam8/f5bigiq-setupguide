@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "BIG-IQ 6.1 Setup Guide"
+classname = "BIG-IQ 7.0 Setup Guide"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/tkam8/f5bigiq-setupguide"

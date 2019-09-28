@@ -5,7 +5,7 @@ BIG-IQ Setup Wizard (AWS)
 
 In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
 
-`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/03.html#guid-37a1f866-5f56-45bb-914f-f24dbd3348d0>`__
+`AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-big-iq-system.html#GUID-37A1F866-5F56-45BB-914F-F24DBD3348D0>`__
 
 
 Step 1: Setup Wizard 
@@ -21,7 +21,7 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
 
    |lab-1-1|
 
-#. Select "BIG-IQ Central Management" for CM. Select "BIG-IQ Data Collection Device" when configuring your logging node
+#. Select **BIG-IQ Central Management** for CM. Select **BIG-IQ Data Collection Device** when configuring your logging node
 
    |lab-1-2|
 
@@ -45,6 +45,20 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
 
    |lab-1-7|
 
+#. Once your DCD setup is complete. Make sure you discover it on your CM device. Click **System** > **BIG-IQ DATA COLLECTION** > **BIG-IQ Data Collection Devices** > click **Add** 
+
+   |lab-1-8|
+
+   - Use the DCD self-ip for the **Discovery/Listener Address**
+   - Use the admin username and password
+   - Use the DCD self-ip as the **Data Collection IP Address**
+
+#. After you discover the DCD device, activate the services you want to monitor. Click **Services** 
+
+#. Confirm that the Listener Address specifies the correct self-IP address on the data collection device, then click **Activate** for every service you want to add 
+
+   |lab-1-9|
+
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
 .. |lab-1-3| image:: images/lab-1-3.png
@@ -52,3 +66,5 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
 .. |lab-1-5| image:: images/lab-1-5.png
 .. |lab-1-6| image:: images/lab-1-6.png
 .. |lab-1-7| image:: images/lab-1-7.png
+.. |lab-1-8| image:: images/lab-1-8.png
+.. |lab-1-9| image:: images/lab-1-9.png

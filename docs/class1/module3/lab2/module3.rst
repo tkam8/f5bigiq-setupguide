@@ -1,33 +1,36 @@
-High Availability (AWS)
+High Availability - Auto (VMware and AWS) 
 ==============================================================
 
-**Description:**
+**Description**
 
-In this lab, we will High Availability for BIG-IQ CM. Refer to below AskF5 link if you need further details. 
+In this lab, we will configure High Availability (Auto) for BIG-IQ CM. When configuring auto failover, you'll also create or select an existing Data Collection Device (DCD) as a quorum device. A quorum DCD is used as the deciding vote to determine which BIG-IQ becomes active if communication is disrupted between the active and standby BIG-IQ in the HA pair.
 
-`AskF5 Reference <https://support.f5.com/kb/en-us/products/big-iq-centralized-mgmt/manuals/product/big-iq-centralized-management-plan-implement-deploy-6-1-0/04.html#ch-managing-a-big-iq-system>`__
+Refer to below AskF5 link if you need further details. 
 
-Step 1: High Availability
+`AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/creating-a-big-iq-high-availability-auto-fail-over-config/adding-standby-big-iq-to-create-ha-auto-failover.html#concept-6078>`__
+
+Step 1:  High Availability - Auto
 ----------------------------------------------
 
-.. NOTE::
-   Currently High Availability only provides configuration sync, not automatic failover. 
+For the high availability pair to synchronize properly, each system must be running the same BIG-IQ version, and the clocks on each system must be synchronized to within 60 seconds.
 
-#. Root login for F5 products in AWS is disabled by default. Prior to HA configuration, log into both Primary and Secondary BIG-IQ CM CLI and run below commands:
-
-  - ``tmsh modify sys db systemauth.disablerootlogin value false``
-  - ``tmsh save sys config``
-  
-#. Click System > BIG-IQ HA > Add Secondary and enter in the Secondary connectivity information
+#. Click **System** > **BIG-IQ HA** > **Add Standby** and enter in the standby device connectivity information
 
    |lab-1-1|
 
-   - Use self-ip of peer BIG-IQ
-   - Enter in root password that you configured in the setup wizard (required)
+   - Use self-ip of peer BIG-IQ. Depending on your network configuration you may use the management-ip instead.
+   - Enter in admin and root password that you configured in the setup wizard (required)
+   - Click **Auto Failover** 
+   - Select the DCD device that you discovered in the setup lab and enter in its root password
+   - Click **Enable Floating IP** and enter in an IP in the management subnet. You cannot use the self-IP segment here
 
-#. Click "OK" to add the HA Peer Device 
+    .. NOTE::
+	    Floating IP addresses are not support in public cloud due to limitations in those environments
 
-   |lab-1-2|
+
+#. Click **Add** to add the HA Peer Device 
+
+
+This completes the BIG-IQ High Availability (Auto) configuration 
 
 .. |lab-1-1| image:: images/lab-1-1.png
-.. |lab-1-2| image:: images/lab-1-2.png
