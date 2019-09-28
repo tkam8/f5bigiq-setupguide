@@ -36,7 +36,6 @@ eventname = "Agility %s Hands-on Lab Guide" % (year)
 # ones.
 extensions = [
     'recommonmark',
-    'sphinx_copybutton',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
