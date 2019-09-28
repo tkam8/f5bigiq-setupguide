@@ -18,7 +18,7 @@ For the high availability pair to synchronize properly, each system must be runn
 
    |lab-1-1|
 
-   - Use self-ip of peer BIG-IQ. Depending on your network configuration you may use the management-ip instead.
+   - Use self-ip of peer BIG-IQ. Depending on your network configuration you may use the management-ip instead
    - Enter in admin and root password that you configured in the setup wizard (required)
    - Click **Auto Failover** 
    - Select the DCD device that you discovered in the setup lab and enter in its root password

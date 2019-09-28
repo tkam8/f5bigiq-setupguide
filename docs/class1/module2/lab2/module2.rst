@@ -58,9 +58,11 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
 
 #. After you discover the DCD device, activate the services you want to monitor. Click **Services** 
 
+   |lab-1-9|
+
 #. Confirm that the Listener Address specifies the correct self-IP address on the data collection device, then click **Activate** for every service you want to add 
 
-   |lab-1-9|
+   |lab-1-10|
 
 This completes the BIG-IQ CM and DCD setup. 
 
@@ -73,3 +75,4 @@ This completes the BIG-IQ CM and DCD setup.
 .. |lab-1-7| image:: images/lab-1-7.png
 .. |lab-1-8| image:: images/lab-1-8.png
 .. |lab-1-9| image:: images/lab-1-9.png
+.. |lab-1-10| image:: images/lab-1-10.png
