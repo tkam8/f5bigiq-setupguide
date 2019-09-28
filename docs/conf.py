@@ -23,11 +23,29 @@ import time
 import re
 import pkgutil
 import string
-sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
+
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../'))
 
 year = time.strftime("%Y")
 eventname = "Agility %s Hands-on Lab Guide" % (year)
+
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+extensions = [
+    'recommonmark',
+    'sphinx_copybutton',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.doctest',
+    'sphinxjp.themes.basicstrap',
+    'cloud_sptheme.ext.table_styling',
+    'sphinx.ext.extlinks'
+]
 
 rst_prolog = """
 .. |classname| replace:: %s
@@ -107,8 +125,16 @@ print " remapped to git branch: %s" % git_branch_name
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-  'sphinxjp.themes.basicstrap',
-  'sphinx.ext.todo'
+    'recommonmark',
+    'sphinx_copybutton',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.doctest',
+    'sphinxjp.themes.basicstrap',
+    'cloud_sptheme.ext.table_styling',
+    'sphinx.ext.extlinks'
 ]
 
 html_context = {
@@ -160,16 +186,10 @@ author = u'F5 Networks, Inc.'
 # built documents.
 #
 # The short X.Y version.
-version = u'1.0'
+version = ''
 # The full version, including alpha/beta/rc tags.
-release = u'1.0'
+release = ''
 
-# External link shortcuts
-extlinks = {'k8sdocs': ('https://kubernetes.io/docs/%s',
-                      ''),
-            'issues': ('https://github.com/F5Networks/f5-ci-docs/issue/%s',
-                       'issue ')
-            }
 
 # All substitutions
 # Try to keep sorted alphabetically
@@ -332,7 +352,7 @@ rst_epilog = """
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -350,7 +370,6 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-import f5_sphinx_theme
 html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
@@ -366,9 +385,6 @@ if on_rtd:
 extlinks = {
     'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
 }
-
-def setup(app):
-    app.add_stylesheet('css/f5_agility_theme.css')
 
 
 
