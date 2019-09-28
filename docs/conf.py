@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "BIG-IQ 6.1 Setup Guide"
+classname = "BIG-IQ 7.0 Setup Guide"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/tkam8/f5bigiq-setupguide"
@@ -231,6 +231,14 @@ html_show_copyright = True
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'F5BIGIQSetupGuide'
+
+# html_add_permalinks
+# Sphinx will add “permalinks” for each heading and description environment as paragraph 
+# signs that become visible when the mouse hovers over them.
+# This value determines the text for the permalink; it defaults to "¶". 
+# Set it to None or the empty string to disable permalinks.
+
+html_add_permalinks = None
 
 # -- Options for HTMLHelp output ------------------------------------------
 

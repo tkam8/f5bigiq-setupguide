@@ -1,4 +1,4 @@
-Provision BIG-IQ (VMware) - TBD
+Provision BIG-IQ (VMware)
 ==============================================================
 
 **Description:**
