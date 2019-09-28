@@ -58,7 +58,7 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
    - Use the DCD self-ip as the **Data Collection IP Address**
 
    For more info about discovering a DCD device, see the `AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-data-collection-device.html#GUID-8B0472C1-16CF-4D9A-9D38-DC592368BB20>`__
-   
+
 #. After you discover the DCD device, activate the services you want to monitor. Click **Add Services** 
 
    |lab-1-9|
@@ -67,7 +67,7 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
 
    |lab-1-10|
 
-This completes the BIG-IQ 
+This completes the BIG-IQ CM and DCD setup. 
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png

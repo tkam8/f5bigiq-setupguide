@@ -62,6 +62,8 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
 
    |lab-1-9|
 
+This completes the BIG-IQ CM and DCD setup. 
+
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
 .. |lab-1-3| image:: images/lab-1-3.png

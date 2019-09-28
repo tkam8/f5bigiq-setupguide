@@ -24,13 +24,14 @@ For the high availability pair to synchronize properly, each system must be runn
    - Select the DCD device that you discovered in the setup lab and enter in its root password
    - Click **Enable Floating IP** and enter in an IP in the management subnet. You cannot use the self-IP segment here
 
-    .. NOTE::
+
+     .. NOTE::
 	    Floating IP addresses are not support in public cloud due to limitations in those environments
 
 
 #. Click **Add** to add the HA Peer Device 
 
 
-This completes the BIG-IQ High Availability (Auto) configuration 
+This completes the BIG-IQ High Availability (Auto) configuration. 
 
 .. |lab-1-1| image:: images/lab-1-1.png
