@@ -3,7 +3,8 @@ BIG-IQ Setup Wizard (AWS)
 
 **Description:**
 
-In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. Refer to below AskF5 link if you need further details. 
+In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in AWS cloud. You will then discover the DCD and activate service you want to monitor. 
+Refer to below AskF5 link for official documentation. 
 
 `AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-big-iq-system.html#GUID-37A1F866-5F56-45BB-914F-F24DBD3348D0>`__
 
@@ -52,6 +53,8 @@ Follow below steps to setup your BIG-IQ CM and DCD devices. The only difference 
    - Use the DCD self-ip for the **Discovery/Listener Address**
    - Use the admin username and password
    - Use the DCD self-ip as the **Data Collection IP Address**
+
+   For more info about discovering a DCD device, see the `AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-data-collection-device.html#GUID-8B0472C1-16CF-4D9A-9D38-DC592368BB20>`__
 
 #. After you discover the DCD device, activate the services you want to monitor. Click **Services** 
 

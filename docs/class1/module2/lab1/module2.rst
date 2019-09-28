@@ -3,7 +3,8 @@ BIG-IQ Setup Wizard (VMware)
 
 **Description:**
 
-In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in Vmware ESXi. Refer to below AskF5 link for official documentation. 
+In this lab, we will complete the setup wizard for BIG-IQ CM and DCD in Vmware ESXi. You will then discover the DCD and activate service you want to monitor. 
+Refer to below AskF5 link for official documentation. 
 
 `AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-big-iq-system.html#GUID-37A1F866-5F56-45BB-914F-F24DBD3348D0>`__
 
@@ -56,11 +57,17 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
    - Use the admin username and password
    - Use the DCD self-ip as the **Data Collection IP Address**
 
-#. After you discover the DCD device, activate the services you want to monitor. Click **Services** 
+   For more info about discovering a DCD device, see the `AskF5 Reference <https://techdocs.f5.com/en-us/bigiq-7-0-0/planning-and-implementing-big-iq-deployment/deploying-a-data-collection-device.html#GUID-8B0472C1-16CF-4D9A-9D38-DC592368BB20>`__
+   
+#. After you discover the DCD device, activate the services you want to monitor. Click **Add Services** 
+
+   |lab-1-9|
 
 #. Confirm that the Listener Address specifies the correct self-IP address on the data collection device, then click **Activate** for every service you want to add 
 
-   |lab-1-9|
+   |lab-1-10|
+
+This completes the BIG-IQ 
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
@@ -71,3 +78,4 @@ Follow below steps to setup both BIG-IQ CM and DCD devices. The only difference 
 .. |lab-1-7| image:: images/lab-1-7.png
 .. |lab-1-8| image:: images/lab-1-8.png
 .. |lab-1-9| image:: images/lab-1-9.png
+.. |lab-1-10| image:: images/lab-1-10.png
