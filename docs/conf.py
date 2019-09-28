@@ -23,7 +23,7 @@ import time
 import re
 import pkgutil
 import string
-import f5_sphinx_theme
+#import f5_sphinx_theme
 
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../'))
@@ -353,17 +353,17 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'f5_sphinx_theme'
-html_theme_path = f5_sphinx_theme.get_html_theme_path()
-html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
-html_theme_options = {
-                        'site_name': 'Community Training Classes & Labs',
-                        'next_prev_link': True
-                     }
+html_theme = 'sphinx_rtd_theme'
+#html_theme_path = f5_sphinx_theme.get_html_theme_path()
+#html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
+#html_theme_options = {
+#                        'site_name': 'Community Training Classes & Labs',
+#                        'next_prev_link': True
+#                     }
 html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
 
-if on_rtd:
-    templates_path = ['_templates']
+#if on_rtd:
+#    templates_path = ['_templates']
 
 extlinks = {
     'raw_github_url':( ("https://raw.githubusercontent.com/tkam8/f5bigiq-setupguide/%s%%s" % git_branch_name), None)
