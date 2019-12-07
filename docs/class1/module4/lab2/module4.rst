@@ -52,7 +52,7 @@ Step 2:  Deploy and Boot OVA file
 
    |lab-1-8|
 
-#. For networks, ensure that the **Management** NIC is associated with the network that has DHCP disabled and confirm other NIC networks. You can ignore the IP allocation settings 
+#. For networks, ensure that the **Management** NIC is associated with the network that has DHCP disabled and confirm other NIC networks. On BIG-IQ you must then configure IP Pools for these networks. You can ignore the IP allocation settings 
 
    |lab-1-9|
 
@@ -93,7 +93,7 @@ Step 2:  Prepare BIG-IP to be a clone instance, and shutdown
     ``shutdown -h now``
 
 
-This completes the BIG-IP Template Creation - DHCP. 
+This completes the BIG-IP Template Creation - IP Pools/Static. 
 
 .. |lab-1-1| image:: images/lab-1-1.png
 .. |lab-1-2| image:: images/lab-1-2.png
