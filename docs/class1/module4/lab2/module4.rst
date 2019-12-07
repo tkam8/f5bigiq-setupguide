@@ -75,18 +75,18 @@ Step 2:  Prepare BIG-IP to be a clone instance, and shutdown
 
 #. Delete the BIG-IP VE clone instance-generated SSH keys
 
-    ``rm -f /config/ssh/ssh_host_*``
-    ``rm -f /shared/ssh/ssh_host_*``
+    | ``rm -f /config/ssh/ssh_host_*``
+    | ``rm -f /shared/ssh/ssh_host_*``
 
 #. (BIG-IP 14.1.0 and later only) Reset the device administrative account passwords to their default values
 
-    ``echo "root:default" | chpasswd``
-    ``echo "admin:admin" | chpasswd``
+    | ``echo "root:default" | chpasswd``
+    | ``echo "admin:admin" | chpasswd``
 
 #. From tmsh prompt, disable DHCP for management IP and save configuration
 
-    ``modify sys global-settings mgmt-dhcp disable``
-    ``save sys config``
+    | ``modify sys global-settings mgmt-dhcp disable``
+    | ``save sys config``
 
 #. Power off the BIG-IP VE clone template instance
 
